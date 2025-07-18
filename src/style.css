@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'ibm-plex-serif';
+    src: url('./fonts/webfontkit-20250718-011422/ibmplexserif-regular-webfont.woff') format('woff');
+    src: url('./fonts/webfontkit-20250718-011422/ibmplexserif-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'ibm-plex-serif';
+}
+
