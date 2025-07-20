@@ -1,3 +1,4 @@
+import './home.css'
 const contentSection = document.createElement("div");
 contentSection.id = "content";
 

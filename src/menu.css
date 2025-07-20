@@ -1,0 +1,53 @@
+header {
+    background-color: var(--soft-black);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 5rem;
+    justify-items: center;
+}
+
+.menu-title {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+    padding-left: 2rem;
+}
+
+.menu-card {
+    width: 75vw;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.5);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.menu-item {
+    padding: 1rem 2rem;
+    background-color: var(--soft-black);
+    color: var(--white);
+    border-radius: 0.5em;
+}
+
+.menu-item  h2 {
+    font-size: 2em;
+    margin: 0;
+    font-family: 'dancing script';
+    color: var(--light-brown);
+}
+
+.flex-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item .price {
+    font-size: 1.25em;
+}
