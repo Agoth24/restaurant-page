@@ -2,5 +2,5 @@
 
 import "./style.css";
 import loadPage from "./loadpage";
-
-loadPage()
+import homePage  from "./homePage";
+loadPage(homePage)
