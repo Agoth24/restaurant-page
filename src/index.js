@@ -1,3 +1,4 @@
-import "./style.css";
+// Entry Point for project, writes to /dist/main.js
 
-console.log("hello broski")
+import "./style.css";
+import "./loadpage"

@@ -1,17 +1,154 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 @font-face {
-    font-family: 'ibm-plex-serif';
-    src: url('./fonts/webfontkit-20250718-011422/ibmplexserif-regular-webfont.woff') format('woff');
-    src: url('./fonts/webfontkit-20250718-011422/ibmplexserif-regular-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'ibm-plex-serif';
+  font-family: "ibm-plex-serif";
+  src: url("./fonts/webfontkit-20250718-011422/ibmplexserif-regular-webfont.woff")
+    format("woff");
+  src: url("./fonts/webfontkit-20250718-011422/ibmplexserif-regular-webfont.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "allura";
+  src: url("./fonts/allura/Allura-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "dancing script";
+  src: url("./fonts/dancing-script-ot/DancingScript-Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --light-beige: #e4e0e1;
+  --cream: #d6c0b3;
+  --light-brown: #ab886d;
+  --coffee-brown: #493628;
+  --light-bg: #f9faf8;
+  --wood-brown: rgb(94, 83, 68);
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "ibm-plex-serif";
+}
+
+header {
+  z-index: 10;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem 5rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+body {
+  background-color: var(--light-bg);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: start;
+}
+.logo h1 {
+  font: 700 3em "dancing script";
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.logo h4 {
+  font-family: "allura";
+  font-size: 1.5em;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  gap: 3rem;
+}
+
+nav > button {
+  all: unset;
+  font-size: 1.33em;
+  font-weight: 700;
+  transition: 0.1s ease;
+}
+
+nav > button:hover {
+cursor: pointer;
+color: var(--light-brown);
+}
+
+#hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-image: url("./assets/images/restaurant-hero.jpg");
+  background-size: cover;
+  background-position: 50% 75%;
+  min-height: 75vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-card {
+  z-index: 1;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  padding: 3rem 5rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: "dancing script";
+  font-weight: 900;
+  font-size: 4em;
+  margin: 0;
+}
+
+.hero-card > p {
+  font-size: 1.5rem;
+}
+
+.hero-button {
+  all: unset;
+  font-size: 1.5em;
+  font-weight: 900;
+  padding: 0.75rem 2rem;
+  background-color: var(--wood-brown);
+  border-radius: 1rem;
+  transition: 0.1s ease;
+}
+
+.hero-button:hover {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
