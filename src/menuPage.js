@@ -1,37 +1,29 @@
 import "./menu.css";
 
-const contentSection = document.querySelector("#content");
-
-const beverageMenuContainer = document.createElement("div");
-beverageMenuContainer.classList.add("menu-container");
-
-const foodMenuContainer = document.createElement("div");
-foodMenuContainer.classList.add("menu-container");
-
 const beverageMenuItems = [
   {
     name: `Espresso`,
     price: `$5`,
     description: `A rich, concentrated shot of coffee with bold flavor and a smooth
-            finish.`,
+    finish.`,
   },
   {
     name: `Cappuccino`,
     price: `$5.75`,
     description: ` A classic blend of espresso, steamed milk, and airy milk foam.
-            Balanced and creamy.`,
+    Balanced and creamy.`,
   },
   {
     name: `Latte`,
     price: `$6`,
     description: ` Silky espresso with steamed milk and a light layer of foam; smooth
-            and mellow.`,
+    and mellow.`,
   },
   {
     name: `Americano`,
     price: `$5.25`,
     description: `Espresso diluted with hot water for a full-bodied, black coffee
-            experience.`,
+    experience.`,
   },
   {
     name: `Iced Coffee`,
@@ -42,7 +34,7 @@ const beverageMenuItems = [
     name: `Green Tea`,
     price: `$5`,
     description: ` A soothing, caffeine-free blend of herbs and botanicals; available
-            in several varieties.`,
+    in several varieties.`,
   },
 ];
 
@@ -51,25 +43,25 @@ const foodMenuItems = [
     name: `Avocado Toast`,
     price: `$9.5`,
     description: `Sourdough topped with smashed avocado, chili flakes, olive oil, and
-            microgreens.`,
+    microgreens.`,
   },
   {
     name: `Eggs Benedict`,
     price: `$14`,
     description: `Poached eggs and smoked ham on toasted English muffins, topped with
-            house-made hollandaise.`,
+    house-made hollandaise.`,
   },
   {
     name: `Breakfast Sandwich`,
     price: `$12`,
     description: ` Fried egg, aged cheddar, arugula, and chipotle mayo on a brioche
-            bun.`,
+    bun.`,
   },
   {
     name: `Chicken & Waffles`,
     price: `$15`,
     description: `Buttermilk waffles topped with fried chicken, maple drizzle, and a
-            dash of hot honey.`,
+    dash of hot honey.`,
   },
 ];
 
@@ -98,17 +90,29 @@ function appendToMenu(menuItems, menuContainer) {
   });
 }
 
-appendToMenu(beverageMenuItems, beverageMenuContainer);
-appendToMenu(foodMenuItems, foodMenuContainer);
+export default function createMenuPage() {
+  const menuPageContent = document.createDocumentFragment();
 
-const beveragesTitle = document.createElement("h1");
-beveragesTitle.textContent = `Beverages`;
-beveragesTitle.classList.add(`menu-title`);
+  const beveragesTitle = document.createElement("h1");
+  beveragesTitle.textContent = `Beverages`;
+  beveragesTitle.classList.add(`menu-title`);
 
-const foodTitle = document.createElement(`h1`);
-foodTitle.textContent = `Brunch Menu`
-foodTitle.classList.add(`menu-title`)
+  const beverageMenuContainer = document.createElement("div");
+  beverageMenuContainer.classList.add("menu-container");
+  appendToMenu(beverageMenuItems, beverageMenuContainer);
 
-contentSection.append(beveragesTitle, beverageMenuContainer, foodTitle, foodMenuContainer)
+  const foodTitle = document.createElement(`h1`);
+  foodTitle.textContent = `Brunch Menu`;
+  foodTitle.classList.add(`menu-title`);
+  const foodMenuContainer = document.createElement("div");
+  foodMenuContainer.classList.add("menu-container");
+  appendToMenu(foodMenuItems, foodMenuContainer);
 
-export default {contentSection}
+  menuPageContent.append(
+    beveragesTitle,
+    beverageMenuContainer,
+    foodTitle,
+    foodMenuContainer
+  );
+  return menuPageContent;
+}

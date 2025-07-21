@@ -1,5 +1,6 @@
-function loadPage(section, content) {
-  section.appendChild(content);
-}
+const contentSection = document.querySelector("#content");
 
-export default loadPage;
+export default function loadPage(content) {
+  contentSection.textContent = "";
+  contentSection.append(content);
+}

@@ -1,26 +1,29 @@
-import './home.css'
-const contentSection = document.createElement("div");
-contentSection.id = "content";
+import "./home.css";
 
-const heroSection = document.createElement("div");
-heroSection.id = "hero";
+export default function createHomePage() {
+  const heroSection = document.createElement("div");
+  heroSection.id = "hero";
 
-const heroCard = document.createElement("div");
-heroCard.classList.add("hero-card");
+  const heroCard = document.createElement("div");
+  heroCard.classList.add("hero-card");
 
-const heroTitle = document.createElement("h1");
-heroTitle.classList.add("hero-title");
-heroTitle.textContent = 'Coffee. Lunch. Vibes.'
+  const heroTitle = document.createElement("h1");
+  heroTitle.classList.add("hero-title");
+  heroTitle.textContent = "Coffee. Lunch. Vibes.";
 
-const heroPara = document.createElement("p");
-heroPara.textContent = 'Enjoy our specialty drinks and cozy atmosphere all day.'
+  const heroPara = document.createElement("p");
+  heroPara.textContent =
+    "Enjoy our specialty drinks and cozy atmosphere all day.";
 
-const heroButton = document.createElement("button");
-heroButton.classList.add("hero-button");
-heroButton.textContent = 'View Menu'
+  const heroButton = document.createElement("button");
+  heroButton.classList.add("hero-button");
+  heroButton.textContent = "View Menu";
 
-heroCard.append(heroTitle, heroPara, heroButton);
-heroSection.appendChild(heroCard);
-contentSection.appendChild(heroSection);
+  heroCard.append(heroTitle, heroPara, heroButton);
+  heroSection.appendChild(heroCard);
 
-export default contentSection
+  const homePageContent = document.createElement("div");
+  homePageContent.appendChild(heroSection);
+
+  return homePageContent;
+}
