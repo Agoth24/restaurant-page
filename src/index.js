@@ -1,7 +1,7 @@
 // Entry Point for project, writes to /dist/main.js
 import './global.css'
 import loadPage from "./loadpage";
-import createHomePage  from "./homePage";
-import createMenuPage from './menuPage';
+import homePageContent  from "./homePage";
+import menuPageContent from './menuPage';
 
-loadPage(createHomePage())
+loadPage(homePageContent(), 'home')
