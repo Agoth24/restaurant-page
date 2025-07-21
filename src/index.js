@@ -5,4 +5,5 @@ import './global.css'
 import "./menu.css"
 import loadPage from "./loadpage";
 import homePage  from "./homePage";
-// loadPage(homePage)
+import menuPage from './menuPage';
+loadPage(menuPage)

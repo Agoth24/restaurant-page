@@ -18,7 +18,7 @@ header {
     padding-left: 2rem;
 }
 
-.menu-card {
+.menu-container {
     width: 75vw;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0,0,0, 0.5);
@@ -41,7 +41,7 @@ header {
     font-family: 'dancing script';
     color: var(--light-brown);
 }
-
+/* Flexboc with space between items */
 .flex-sb {
     display: flex;
     justify-content: space-between;
