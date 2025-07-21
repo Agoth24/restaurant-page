@@ -1,5 +1,5 @@
-function loadPage(section) {
-  document.body.appendChild(section);
+function loadPage(section, content) {
+  section.appendChild(content);
 }
 
 export default loadPage;
