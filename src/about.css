@@ -1,0 +1,40 @@
+header {
+    background-color: var(--soft-black);
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 15rem;
+  gap: 2rem;
+}
+
+.about-title, .hours-title {
+  font-size: 2.25em;
+  margin: 0;
+  font-weight: 900;
+  line-height: 1;
+  padding-top: 1rem;
+}
+
+.about-container, .hours-container {
+  width: 100%;
+  padding: 2.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  background-color: var(--soft-black);
+  color: var(--white);
+  border-left: 1rem solid var(--light-brown);
+}
+
+
+
+.about-container, .hours-container > p {
+    font-size: 1.25rem;
+}
+
+.hours-container {
+    text-align: center;
+}
+

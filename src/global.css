@@ -63,7 +63,7 @@ body {
   background-color: var(--light-bg);
 }
 
-.logo {
+#logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,14 +72,14 @@ body {
 }
 
 
-.logo h1 {
+#logo h1 {
   font: 700 3em "dancing script";
   margin: 0;
   padding: 0;
   line-height: 1;
 }
 
-.logo h4 {
+#logo h4 {
   font-family: "allura";
   font-size: 1.5em;
   margin: 0;
@@ -97,7 +97,7 @@ nav > button {
   transition: 0.1s ease;
 }
 
-.logo:hover, nav > button:hover {
+#logo:hover, nav > button:hover {
 cursor: pointer;
 color: var(--light-brown);
 }
