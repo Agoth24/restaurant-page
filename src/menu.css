@@ -6,13 +6,14 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
     align-items: center;
 }
 
 .menu-title {
     font-size: 2.25em;
     font-weight: 900;
+    padding-top: 1rem;
     margin: 0;
     line-height: 1;
 }
